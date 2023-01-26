@@ -1,0 +1,290 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    background: #073042;
+  }
+
+  .header-timeline {
+    width: 100%;
+    position: static;
+    height: max-content;
+  }
+
+  /*title*/
+  h1 {
+    font-family: "Syncopate", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3vw;
+    line-height: 1.2;
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  h1 span {
+    display: block;
+    font-size: 9vw;
+  }
+
+  .timeline {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: calc(2vh + 50px);
+  }
+
+  .container {
+    padding: 10px 50px;
+    position: relative;
+    width: calc(50% - 100px);
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+  }
+
+  @keyframes movedown {
+    0% {
+      opacity: 1;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  /* mostra le vignette una dopo l'altra*/
+  .container:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .container:nth-child(2) {
+    animation-delay: 1s;
+  }
+  .container:nth-child(3) {
+    animation-delay: 2s;
+  }
+  .container:nth-child(4) {
+    animation-delay: 3s;
+  }
+  .container:nth-child(5) {
+    animation-delay: 4s;
+  }
+  .container:nth-child(6) {
+    animation-delay: 5s;
+  }
+  .container:nth-child(7) {
+    animation-delay: 6s;
+  }
+  .container:nth-child(8) {
+    animation-delay: 7s;
+  }
+  .container:nth-child(9) {
+    animation-delay: 8s;
+  }
+  .container:nth-child(10) {
+    animation-delay: 9s;
+  }
+  .container:nth-child(11) {
+    animation-delay: 10s;
+  }
+  .container:nth-child(12) {
+    animation-delay: 11s;
+  }
+
+  .text-box {
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+
+  .left-container {
+    left: 0;
+  }
+
+  .right-container {
+    left: 50%;
+  }
+
+  /*pallino bianco a destra dei container di sinistra*/
+  .container img {
+    position: absolute;
+    width: 40px;
+    border: radius 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+  }
+
+  /*pallino bianco a sinistra dei container di destra*/
+  .right-container img {
+    left: -20px;
+  }
+
+  /* linea verticale*/
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 12s linear forwards;
+  }
+
+  /* movimento linea verticale*/
+  @keyframes moveline {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+
+  .text-box h2 {
+    font-weight: 600;
+  }
+
+  /* spazio dopo il titolo*/
+  .text-box small {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  /* freccette che puntano al pallino*/
+  .left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid white;
+    right: -15px;
+  }
+
+  .right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+    left: -15px;
+  }
+
+  /*BUTTON*/
+
+  .scrollup button {
+    border-color: #fff;
+    position: fixed;
+    bottom: 2vh;
+    right: 2vw;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    object-fit: fill;
+    border-radius: 24px;
+    z-index: 5;
+  }
+
+  .scrollup button{
+    cursor: pointer;
+  }
+
+  .scrollup img {
+    border-color: #fff;
+    position: fixed;
+    bottom: inherit;
+    right: inherit;
+    height: inherit;
+    width: inherit;
+    background-color: #fff;
+    object-fit: fill;
+    border-radius: 24px;
+  }
+
+  .last {
+    display: none;
+  }
+
+  /*rendere tutto responsive*/
+  @media screen and (max-width: 600px) {
+    body {
+      width: 100vw;
+    }
+
+    .header-timeline {
+      width: 100%;
+      position: static;
+      height: 10vh;
+    }
+
+    h1 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .timeline {
+      font-family: "Poppins", sans-serif;
+      position: relative;
+      width: 100%;
+      margin: 0;
+      margin-top: 1vh;
+    }
+      /*movimento linea*/
+    .timeline::after {
+      left: 30px;
+    }
+    .container {
+      width: calc(100% - 100px);
+      padding-left: 80px;
+      padding-right: 25px;
+    }
+    .text-box {
+      font-size: 13px;
+    }
+    .text-box small {
+      margin-bottom: 10px;
+    }
+    .right-container {
+      left: 0;
+    }
+
+    .left-container img,
+    .right-container img {
+      left: 10px;
+    }
+
+    .left-container-arrow,
+    .right-container-arrow {
+      border-right: 15px solid white;
+      border-left: 0;
+      left: -15px;
+    }
+
+    .scrollup button {
+      bottom: 4vh;
+      right: 7vw;
+    }
+
+    .last {
+      height: 10vh;
+      display: flex;
+    }
+    .last img {
+      display: block;
+      margin: auto;
+      height: inherit;
+    }
+  }

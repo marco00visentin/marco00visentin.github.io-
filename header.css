@@ -1,0 +1,111 @@
+/* BURGER MENU */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+/* LOGO ANDROID */
+.title {
+  z-index: 1;
+  padding-left: 5%;
+}
+
+/* MENU CONTENT */
+
+.main_menu {
+  z-index: 5;
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  align-self: center;
+  text-transform: uppercase;
+}
+
+.main_menu ul {
+  height:100%;
+  width:100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  opacity: 0.9;
+}
+
+.main_menu li {
+  color: black;
+  height: 33%;
+  width:100%;
+  vertical-align: middle;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.75vw;
+  font-size: 1.2vw;
+  line-height: 4vw;
+  font-weight: 550;
+}
+
+.main_menu a {
+  color: inherit;
+  text-decoration: none;
+
+}
+
+.main_menu li:hover {
+  background-color: rgba(156, 156, 156, 0.737);
+  color: white;
+  font-weight: 550;
+  font-size: 1.4vw;
+}
+
+.video.opacity {
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.menu_button {
+  background-color: transparent;
+  border: 0;
+  position: relative;
+  right: 4%;
+  z-index: 5;
+}
+
+.menu_button:hover {
+  cursor: pointer;
+}
+
+.menu_button img {
+  position: relative;
+  z-index: -5;
+}
+
+@media screen and (max-width: 600px) {
+  .main_menu {
+    height:30%;
+  }
+  .main_menu ul {
+    font-size: 2vh;
+    margin:auto;
+  }
+  .main_menu li {
+    font-size: 2vh;
+    margin:auto;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .main_menu li:hover {
+    font-size: 2.2vh;
+  }
+  .main_menu a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+  }
+}

@@ -1,0 +1,92 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* VIDEO PAGINA PRINCIPALE */
+.content-video {
+  height: 100%;
+  width: 100%;
+}
+
+.video {
+  position: absolute;
+  overflow: hidden;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -10;
+  object-fit: cover;
+}
+
+/* TABELLA LOGHI INSTA/FACEBOOK/SITO */
+.table {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 12%;
+}
+
+.LogoInsta {
+  width: 10%;
+  opacity: 50%;
+}
+
+.LogoFacebook {
+  width: 10%;
+  opacity: 50%;
+}
+
+.LogoSito {
+  width: 10%;
+  opacity: 50%;
+}
+
+.LogoInsta:hover {
+  width: 12%;
+  opacity: 100%;
+}
+.LogoFacebook:hover {
+  width: 12%;
+  opacity: 100%;
+}
+
+.LogoSito:hover {
+  width: 12%;
+  opacity: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .table {
+    height: 15%;
+  }
+  .LogoInsta {
+    width: 40%;
+    opacity: 80%;
+  }
+  
+  .LogoFacebook {
+    width: 40%;
+    opacity: 80%;
+  }
+  
+  .LogoSito {
+    width: 40%;
+    opacity: 80%;
+  }
+  
+  .LogoInsta:hover {
+    width: 42%;
+    opacity: 100%;
+  }
+  .LogoFacebook:hover {
+    width: 42%;
+    opacity: 100%;
+  }
+  
+  .LogoSito:hover {
+    width: 42%;
+    opacity: 100%;
+  }
+}
